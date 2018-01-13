@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int guesses = 10;
+        boolean win = false;
         int number = (int) (Math.random() * 100 + 1);
         System.out.println("you have" + guesses + " to guess a number between 1-100\n");
         System.out.println(number);
@@ -12,6 +13,7 @@ public class Main {
             int guess = scanner.nextInt();
             if (guess == number) {
                 System.out.println("Good Job");
+                win = true;
                 break;
             }
             if (guess > number) {
@@ -20,6 +22,9 @@ public class Main {
             if (guess < number) {
                 System.out.println("Your guess is smaller");
             }
+        }
+        if (!win){
+            System.out.println("You lose the number was " + number);
         }
 
     }
