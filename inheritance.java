@@ -1,6 +1,6 @@
 
 import java.util.Date;
-
+//super overrides parent implementation, final prevents override
 class BankAccount{
     private String acctnum;
     private double balance;
